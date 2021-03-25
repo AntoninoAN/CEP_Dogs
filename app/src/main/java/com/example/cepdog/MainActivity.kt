@@ -12,9 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<RecyclerView>(R.id.recycler).apply {
-            adapter = DogAdapter(factoryDataEmpty())
-            layoutManager = LinearLayoutManager(this@MainActivity,
-            LinearLayoutManager.HORIZONTAL, false)
+            adapter = DogAdapter(factoryData())
+            layoutManager = LinearLayoutManager(this@MainActivity)
         }
     }
 

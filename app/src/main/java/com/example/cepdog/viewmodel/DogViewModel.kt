@@ -13,11 +13,11 @@ class DogViewModel: ViewModel() {
     fun getDogData(): LiveData<DoggyResponse> = mutableLiveData
 
     init{
-        viewModelScope.launch {
-            val response =
-                DogApi.getApi().getDogs()
-
-            mutableLiveData.value = response
-        }
+//        viewModelScope.launch {
+//            val response =
+//                DogApi.getApi().getDogs()
+//
+//            mutableLiveData.value = response
+//        }
     }
 }

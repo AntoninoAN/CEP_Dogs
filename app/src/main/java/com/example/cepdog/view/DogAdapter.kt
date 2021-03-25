@@ -57,7 +57,7 @@ class DogAdapter(private val dataSet: List<String>) :
     }
 
     override fun getItemCount(): Int {
-        return dataSet.size
+        return if(dataSet.isNotEmpty()) dataSet.size else 1 //Update: Should be n or 1
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
